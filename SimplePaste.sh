@@ -54,6 +54,6 @@ elif [[ "$varg" == "$1" ]]; then
 		} < "$Temp_File"
 	fi
 	
-else echo "script usage: $(basename $0) [-x name] [-c name] [-v]"
+else echo "script usage: $(basename $0) [x name] [c name] [v]"
 exit 1
 fi
