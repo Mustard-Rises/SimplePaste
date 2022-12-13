@@ -21,7 +21,6 @@ if [[ "$xarg" == "$1" && "$count" -eq 1 ]]; then
 	do 	
 		echo "$var" >> $Temp_File
 	done
-	echo "x"
 
 elif [[ "$carg" == "$1" && "$count" -eq 1 ]]; then
 	echo $(pwd) > $Temp_Dir
@@ -30,10 +29,9 @@ elif [[ "$carg" == "$1" && "$count" -eq 1 ]]; then
 	do 	
 		echo "$var" >> $Temp_File
 	done
-	echo "c"
 
 elif [[ "$varg" == "$1" ]]; then
-	echo "v"
+
 
 else echo "script usage: $(basename $0) [-x name] [-c name] [-v]"
 exit 1
