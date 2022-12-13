@@ -42,6 +42,8 @@ elif [[ "$varg" == "$1" ]]; then
 			mv  "$Dir"/"$line" "$Pwd"
 		done
 		} < "$Temp_File"
+		echo "" > $Temp_Dir
+		echo "" > $Temp_File
 	else 
 		{
 		read
