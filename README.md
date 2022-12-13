@@ -11,8 +11,8 @@ Simple script to cut, copy and paste files in terminal.
 sp [option] [arg]
 
 # OPTIONS
-[x] - Cut file. File name as [arg].
+[x] - Cut file.  File name as [arg].
 
-[c] - Copy file. File names as [arg].
+[c] - Copy file. File name as [arg].
 
 [v] - Paste file. 
