@@ -16,3 +16,10 @@ sp [option] [arg]
 [c] - Copy file. File name as [arg].
 
 [v] - Paste file. 
+
+# Examples
+sp x file1 file2 file3
+
+sp c file*
+
+sp v
