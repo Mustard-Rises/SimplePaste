@@ -15,7 +15,7 @@ if [ "$#" -lt 2 ]; then
 fi
 
 if [[ "$xarg" == "$1" && "$count" -eq 1 ]]; then
-	echo $(pwd) > $Temp_Dir
+	pwd > $Temp_Dir
 	echo "x" > $Temp_File
 	for var in "${@:2}"
 	do 	
@@ -23,7 +23,7 @@ if [[ "$xarg" == "$1" && "$count" -eq 1 ]]; then
 	done
 
 elif [[ "$carg" == "$1" && "$count" -eq 1 ]]; then
-	echo $(pwd) > $Temp_Dir
+	pwd > $Temp_Dir
 	echo "c" > $Temp_File
 	for var in "${@:2}"
 	do 	
@@ -31,13 +31,13 @@ elif [[ "$carg" == "$1" && "$count" -eq 1 ]]; then
 	done
 
 elif [[ "$varg" == "$1" ]]; then
-	Dir=`cat $Temp_Dir`
-	read line < "$Temp_File"
+	Dir=$(cat $Temp_Dir)
+	read -r line < "$Temp_File"
 	
 	if [[ "$line" == "$xarg" ]]; then
 		{
-		read
-		while read line; 
+		read -r
+		while read -r line; 
 		do
 			mv  "$Dir"/"$line" "$Pwd"
 		done
@@ -46,14 +46,14 @@ elif [[ "$varg" == "$1" ]]; then
 		echo "" > $Temp_File
 	else 
 		{
-		read
-		while read line; 
+		read -r
+		while read -r line; 
 		do
 			cp  "$Dir"/"$line" "$Pwd"
 		done
 		} < "$Temp_File"
 	fi
 	
-else echo "script usage: $(basename $0) [x name] [c name] [v]"
+else echo "script usage: $(basename "$0") [x name] [c name] [v]"
 exit 1
 fi
