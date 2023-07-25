@@ -2,9 +2,10 @@
 Simple script to cut, copy and paste files in terminal.
 
 # Install
-1. Download Setup.sh and SimplePaste.sh
-2. chmod +x Setup.sh
-3. sh Setup.sh
+1. git clone https://github.com/Mustard-Rises/SimplePaste/edit/main/README.md
+2. cd SimplePaste
+3. chmod +x Setup.sh
+4. sh Setup.sh
 
 # Script usage
 
